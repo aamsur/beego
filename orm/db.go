@@ -937,13 +937,23 @@ func (d *dbBase) Count(q dbQuerier, qs *querySet, mi *modelInfo, cond *Condition
 	tables.parseRelated(qs.related, qs.relDepth)
 
 	where, args := tables.getCondSql(cond, false, tz)
-	groupBy := tables.getGroupSql(qs.groups)
 	tables.getOrderSql(qs.orders)
 	join := tables.getJoinSql()
 
 	Q := d.ins.TableQuote()
 
-	query := fmt.Sprintf("SELECT COUNT(*) FROM %s%s%s T0 %s%s%s", Q, mi.table, Q, join, where, groupBy)
+	gby := ""
+	for _, value := range qs.groups {
+		gby = value
+		fmt.Println(gby)
+	}
+
+	groupBy := "*"
+	if(gby!=""){
+		groupBy = fmt.Sprintf("distinct %s", gby)
+	}
+
+	query := fmt.Sprintf("SELECT COUNT(%s) FROM %s%s%s T0 %s%s", groupBy, Q, mi.table, Q, join, where)
 
 	d.ins.ReplaceMarks(&query)
 
