@@ -22,10 +22,10 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/astaxie/beego/config"
-	"github.com/astaxie/beego/logs"
-	"github.com/astaxie/beego/session"
-	"github.com/astaxie/beego/utils"
+	"github.com/aamsur/beego/config"
+	"github.com/aamsur/beego/logs"
+	"github.com/aamsur/beego/session"
+	"github.com/aamsur/beego/utils"
 )
 
 var (

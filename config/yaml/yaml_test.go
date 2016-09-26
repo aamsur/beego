@@ -18,7 +18,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/astaxie/beego/config"
+	"github.com/aamsur/beego/config"
 )
 
 var yamlcontext = `

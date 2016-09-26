@@ -14,7 +14,7 @@
 
 // Usage:
 //
-// import "github.com/astaxie/beego/logs"
+// import "github.com/aamsur/beego/logs"
 //
 //	log := NewLogger(10000)
 //	log.SetLogger("console", "")

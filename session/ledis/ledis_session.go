@@ -6,7 +6,7 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/astaxie/beego/session"
+	"github.com/aamsur/beego/session"
 	"github.com/siddontang/ledisdb/config"
 	"github.com/siddontang/ledisdb/ledis"
 )

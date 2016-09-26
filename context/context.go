@@ -14,7 +14,7 @@
 
 // Usage:
 //
-//	import "github.com/astaxie/beego/context"
+//	import "github.com/aamsur/beego/context"
 //
 //	ctx := context.Context{Request:req,ResponseWriter:rw}
 //
@@ -31,7 +31,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/astaxie/beego/utils"
+	"github.com/aamsur/beego/utils"
 )
 
 // Http request context struct including BeegoInput, BeegoOutput, http.Request and http.ResponseWriter.
